@@ -1,3 +1,6 @@
+@import "_config";
+@import "_utilities";
+@import "_btnConfig";
 
 * {
   box-sizing: border-box;
@@ -28,6 +31,46 @@ a {
   // 1. $variables
   // 2. nesting (dont forget about the ampersand (&) parent selector!)
   // 3. At-Rules
+  background-color: $primary-color;
+  color: white;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    ul {
+      text-decoration: none;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      a {
+        color: white;
+        &:hover{
+          font-weight: bold;
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+  
+  .hero-content {
+    display: flexbox;
+    padding: 2rem;
+
+    div {
+      float: left;
+      width: 50%;
+    }
+
+    img {
+      float: right;
+      width: 50%;
+
+    }
+
+  }
 }
 
 // This code is related to some of the aspects of SCSS we have yet to cover.
